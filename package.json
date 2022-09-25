@@ -7,11 +7,8 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "prebuild-dev": "rm -rf dist",
-    "build-dev": "parcel build index.html --no-minify --no-source-maps",
-    "prebuild-prod": "rm -rf dist",
-    "build-prod": "parcel build index.html",
-    "deploy": "gh-pages -d dist"
+    "build": "parcel build index.html --public-url ./",
+    "deploy": "parcel build index.html --public-url ./ && gh-pages -d dist"
   },
   "staticFiles": {
     "staticPath": "images"
