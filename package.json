@@ -7,8 +7,10 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url ./",
-    "predeploy": "rm -rf dist && parcel build index.html --no-source-maps --public-url ./",
+    "prebuild-dev": "rm -rf dist",
+    "build-dev": "parcel build index.html --no-minify --no-source-maps",
+    "prebuild-prod": "rm -rf dist",
+    "build-prod": "parcel build index.html",
     "deploy": "gh-pages -d dist"
   },
   "staticFiles": {
