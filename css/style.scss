@@ -1,0 +1,180 @@
+@import url(https://fonts.google.com/specimen/Overpass);
+
+$Orange: hsl(25, 97%, 53%);
+$White: hsl(0, 0%, 100%);
+$Light-Grey: hsl(217, 12%, 63%);
+$Medium-Grey: hsl(216, 12%, 54%);
+$Dark-Blue: hsl(213, 19%, 18%);
+$Very-Dark-Blue: hsl(216, 12%, 8%);
+
+$Paragrath-Orange: rgb(138,95,67);
+
+$Font-size-paragraph: 15px;
+
+$Font-family: 'Overpass', sans-serif;
+
+$Left: 25px;
+
+$Rating-Size: 400px;
+$Mobile-Rating-Size: 300px;
+
+$background-item: rgb(40,47,57);
+
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $Very-Dark-Blue;
+    width: 100vw;
+    height: 100vh;
+    font-family: $Font-family;
+    object-fit: contain;
+
+    .rating {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: $Rating-Size;
+        width: $Rating-Size;
+        border-radius: 30px;
+        background: linear-gradient(360deg, rgb(23,30,40) 0%, rgb(34,41,51) 100%);
+        
+        @media (max-width: 450px) {
+            transform: scale(0.8);
+        }
+    
+        .star-container {
+            position: absolute;
+            top: 30px;
+            left: $Left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $background-item;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+            
+        .tittle {
+            position: absolute;
+            top: 90px;
+            left: $Left;
+            font-size: 28px;
+            color: $White;
+            font-weight: 400;
+        }
+        
+        .paragraph {
+            position: absolute;
+            top: 130px;
+            left: $Left;
+            font-size: $Font-size-paragraph;
+            color: $Light-Grey;
+            font-weight: 400;
+            width: 330px;
+            line-height: 20px;
+        }
+        
+        .note-container {
+            position: absolute;
+            top: 230px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: calc(100% - (2 * $Left));
+            height: 40px;
+            
+            .note{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(40,47,57);
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                color: $Light-Grey;
+                font-size: 14px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $Orange;
+                    color: $White;
+                    transition: 0.5s;
+                }
+            }
+
+            .selected {
+                background-color: rgb(124,135,152);
+                color: $White;
+            }
+        }
+
+        .submit {
+            position: absolute;
+            top: 300px;
+            width: 80%;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $Orange;
+            color: $White;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            &:hover {
+                background-color: $White;
+                color: $Orange;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+        }
+
+        .thank-you{
+            position: absolute;
+            top: 40px;
+        }
+
+        .submited-note{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 180px;
+            background-color: $background-item;
+            color: $Paragrath-Orange;
+            width: calc(100% - 230px);
+            height: 27px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .submited-tittle{
+            position: absolute;
+            top: 250px;
+            font-size: 28px;
+            color: $White;
+            font-weight: 400;
+        }
+
+        .submited-paragraph{
+            position: absolute;
+            top: 290px;
+            font-size: $Font-size-paragraph;
+            color: $Light-Grey;
+            font-weight: 400;
+            width: calc(100% - 62px);
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+
+    .attribution{
+        margin-top: 50px;
+        font-size: 12px;
+        color: $Light-Grey;
+    }
+}

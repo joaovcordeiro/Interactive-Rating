@@ -1,0 +1,145 @@
+@import url(https://fonts.google.com/specimen/Overpass);
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(216deg, 12%, 8%);
+  width: 100vw;
+  height: 100vh;
+  font-family: "Overpass", sans-serif;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.root .rating {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+  border-radius: 30px;
+  background: linear-gradient(360deg, rgb(23, 30, 40) 0%, rgb(34, 41, 51) 100%);
+}
+@media (max-width: 450px) {
+  .root .rating {
+    transform: scale(0.8);
+  }
+}
+.root .rating .star-container {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(40, 47, 57);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.root .rating .tittle {
+  position: absolute;
+  top: 90px;
+  left: 25px;
+  font-size: 28px;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 400;
+}
+.root .rating .paragraph {
+  position: absolute;
+  top: 130px;
+  left: 25px;
+  font-size: 15px;
+  color: hsl(217deg, 12%, 63%);
+  font-weight: 400;
+  width: 330px;
+  line-height: 20px;
+}
+.root .rating .note-container {
+  position: absolute;
+  top: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 50px);
+  height: 40px;
+}
+.root .rating .note-container .note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(40, 47, 57);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: hsl(217deg, 12%, 63%);
+  font-size: 14px;
+  cursor: pointer;
+}
+.root .rating .note-container .note:hover {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  transition: 0.5s;
+}
+.root .rating .note-container .selected {
+  background-color: rgb(124, 135, 152);
+  color: hsl(0deg, 0%, 100%);
+}
+.root .rating .submit {
+  position: absolute;
+  top: 300px;
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.root .rating .submit:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.root .rating .thank-you {
+  position: absolute;
+  top: 40px;
+}
+.root .rating .submited-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 180px;
+  background-color: rgb(40, 47, 57);
+  color: rgb(138, 95, 67);
+  width: calc(100% - 230px);
+  height: 27px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+.root .rating .submited-tittle {
+  position: absolute;
+  top: 250px;
+  font-size: 28px;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 400;
+}
+.root .rating .submited-paragraph {
+  position: absolute;
+  top: 290px;
+  font-size: 15px;
+  color: hsl(217deg, 12%, 63%);
+  font-weight: 400;
+  width: calc(100% - 62px);
+  line-height: 20px;
+  text-align: center;
+}
+.root .attribution {
+  margin-top: 50px;
+  font-size: 12px;
+  color: hsl(217deg, 12%, 63%);
+}/*# sourceMappingURL=style.css.map */
