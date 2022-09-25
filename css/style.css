@@ -8,8 +8,6 @@
   width: 100vw;
   height: 100vh;
   font-family: "Overpass", sans-serif;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .root .rating {
   position: relative;
@@ -25,6 +23,7 @@
 @media (max-width: 450px) {
   .root .rating {
     transform: scale(0.8);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 }
 .root .rating .star-container {
